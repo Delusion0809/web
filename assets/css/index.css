@@ -1,0 +1,38 @@
+.layui-body{
+    overflow: hidden;   
+}
+
+.user_info{
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    border-bottom: 1px solid #000;
+}
+
+.layui-icon{
+    margin-right: 6px;
+}
+
+#nav dd{
+    padding-left: 20px;
+}
+
+.layui-nav-img{
+    width: 35px;
+    height:35px;
+}
+
+.text_avatar{
+    position: relative;
+    display: inline-block;
+    top: 2px;
+    margin-right: 10px;
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 50%;
+    background: skyblue;
+}
