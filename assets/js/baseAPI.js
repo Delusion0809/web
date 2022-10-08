@@ -7,5 +7,14 @@ $(function(){
                 Authorization:localStorage.getItem('token')
             }
         }
+        
+        options.complete=function(res){
+            if(res.responseJSON.status===1&&res.responseJSON.message==="身份认证失败！"){
+            //     1.强制清空token (可以将程序员手动添加在localStorage的强制清除掉)
+                localStorage.removeItem('token')
+                location.href='/login.html'
+            }
+        }
+        
     })  
 })

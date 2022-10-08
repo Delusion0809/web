@@ -1,9 +1,10 @@
 $(function(){
+     // 获取用户信息
+     initUserInfo()
+
     var layer=layui.layer
 
-    // 获取用户信息
-    initUserInfo()
-
+   
     $('#btnlogout').on('click',function(){
         layer.confirm('确认退出?', {icon: 3, title:'提示'}, function(index){            
             localStorage.removeItem('token')
@@ -21,7 +22,6 @@ $(function(){
                 if(res.status!==0){
                     return layer.msg('获取用户信息失败！')
                 }
-                layer.msg('获取用户信息成功！')
                 renderAvatar(res.data)
             }
 
@@ -30,12 +30,10 @@ $(function(){
 
     // 渲染图片头像和文字头像
     function renderAvatar(res){
-        console.log(res)
         // 定义name作为欢迎词
         var name=res.nickname||res.username
         if(name.length>5){
             name=name.substring(0,8)+'*'
-            console.log(name)
         }
 
         $('#welcome').html('欢迎&nbsp;&nbsp;'+name)
